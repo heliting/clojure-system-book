@@ -57,7 +57,7 @@ The ````arrow```` component is used in the ````birdwatch.charts.wordcount-chart`
        [:text (merge text-defaults {:y (+ y 8) :x (+ w 160)}) cnt]
        [:text (merge text-defaults {:y (+ y 8) :x (+ w 171) :fill "#666" :textAnchor "start"}) cnt])]))
 
-(defn- wordcount-barchart [cmd-chan]
+(defn-wordcount-barchart [cmd-chan]
   (let [indexed @items
         mx (apply max (map (fn [[idx [k v]]] v) indexed))
         cnt (count indexed)]
